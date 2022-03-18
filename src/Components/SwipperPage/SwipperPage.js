@@ -4,17 +4,26 @@ import './SwipperPage.css'
 
 const SwipperPage = () => {
     let reactSwipeEl;
+    let currentSlide;
+    let oldSlide;
 
     return (
       <div className='swipper-page'>
         <ReactSwipe
           className="carousel"
-          swipeOptions={{ continuous: false }}
+          swipeOptions={{
+               continuous: true,
+               startSlide:1,
+               callback: (index,elem)=>{
+                console.log(index, elem)
+               },
+               
+            }}
           ref={el => (reactSwipeEl = el)}
         >
-          <div>PANE 1</div>
-          <div>PANE 2</div>
-          <div>PANE 3</div>
+          <div className='sossur1'>PANE 1</div>
+          <div className='sossur2'>PANE 2</div>
+          <div className='sossur3'>PANE 3</div>
         </ReactSwipe>
         <div className='button-container'>
             <button onClick={() => reactSwipeEl.prev()}>Previous</button>
