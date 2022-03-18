@@ -3,9 +3,13 @@ import ReactSwipe from 'react-swipe'
 import './SwipperPage.css'
 
 const SwipperPage = () => {
+
     let reactSwipeEl;
-    let currentSlide;
-    let oldSlide;
+    let indexOnSlide;
+    
+    let onSlide = (e) =>{
+      console.log(e)
+    }
 
     return (
       <div className='swipper-page'>
@@ -14,8 +18,14 @@ const SwipperPage = () => {
           swipeOptions={{
                continuous: true,
                startSlide:1,
-               callback: (index,elem)=>{
-                console.log(index, elem)
+               transitionEnd: ()=>{
+                indexOnSlide = reactSwipeEl.getPos()
+                if(indexOnSlide===0){
+                  onSlide(indexOnSlide)
+                }else if(indexOnSlide===2){
+                  onSlide(indexOnSlide)
+                }
+                reactSwipeEl.slide(1,0)
                },
                
             }}
