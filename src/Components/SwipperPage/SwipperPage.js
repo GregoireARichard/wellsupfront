@@ -4,7 +4,7 @@ import './SwipperPage.css'
 
 import dislike from './img/dislike.svg'
 import like from './img/like.svg'
-import ProgressBar from './ProgressBar/ProgressBar.js'
+import ProgressBar from './ProgressBar/PBar.js'
 
 const SwipperPage = () => {
 
