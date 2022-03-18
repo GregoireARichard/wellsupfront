@@ -2,6 +2,10 @@ import React from 'react'
 import ReactSwipe from 'react-swipe'
 import './SwipperPage.css'
 
+import dislike from './img/dislike.svg'
+import like from './img/like.svg'
+import ProgressBar from './ProgressBar/ProgressBar.js'
+
 const SwipperPage = () => {
 
     let reactSwipeEl;
@@ -31,14 +35,27 @@ const SwipperPage = () => {
             }}
           ref={el => (reactSwipeEl = el)}
         >
-          <div className='sossur1'>PANE 1</div>
-          <div className='sossur2'>PANE 2</div>
-          <div className='sossur3'>PANE 3</div>
+          <div className='sossur1'>
+            
+          </div>
+          <div className='question-card-container'>
+            <div className='question-card'>
+
+            </div>
+          </div>
+          <div className='sossur3'>
+
+          </div>
         </ReactSwipe>
         <div className='button-container'>
-            <button onClick={() => reactSwipeEl.prev()}>Previous</button>
-            <button onClick={() => reactSwipeEl.next()}>Next</button>
+            <div className='dislike-button-container' onClick={()=>reactSwipeEl.prev()} >
+              <img src={dislike} alt='a dislike button'/>
+            </div>
+            <div className='like-button-container' onClick={()=>reactSwipeEl.next()}>
+              <img src={like} alt='a like button' />
+            </div>
         </div>
+        <ProgressBar/>
       </div>
     );
 }

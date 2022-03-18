@@ -1,7 +1,6 @@
 .swipper-page{
     width: 100%;
-    height: 80%;
-    background-color: aqua;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -9,30 +8,51 @@
 }
 
 .carousel{
-    width: 70%;
+    width: 100%;
     height: 80%;
 }
 
 .carousel>div{
     width: 100%;
     height: 100%;
-    background-color: aquamarine;
-    text-align: center;
+    
 }
 
 .carousel>div>div{
     height: 100%;
+}
+
+
+
+.question-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.question-card{
+    width: 80%;
+    height: 90%;
+    border-radius: 25px;
+    box-shadow: 4px 7px 13px 5px rgba(0,0,0,0.35);
+}
+
+.button-container{
     width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.sossur1{
-    background-color: blueviolet;
-}
-
-.sossur2{
-    background-color: yellow;
-}
-
-.sossur3{
-    background-color: red;
+.button-container>div{
+    width: 10vh;
+    height: 10vh;
+    background-color: var(--bg-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 4px 7px 19px 3px rgba(0,0,0,0.28);
 }
