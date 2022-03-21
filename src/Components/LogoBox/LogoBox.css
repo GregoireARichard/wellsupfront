@@ -1,0 +1,18 @@
+.logoBox{
+    width: 100%;
+    height: 8%;
+    display: grid;
+    grid-template:25% 70% 5% / 35% 55% 10%;
+}
+
+.logoBox>h1{
+    grid-area: 2 / 2;
+    width: 30vw;
+    height: 100%;
+    text-align: center;
+}
+
+.infoIcon{
+   grid-area: 2 / 3;
+   width: 6vw;
+}

@@ -1,4 +1,6 @@
-import React from 'react'
+import React, {useState} from 'react'
+
+
 import ReactSwipe from 'react-swipe'
 import './SwipperPage.css'
 
@@ -10,6 +12,22 @@ const SwipperPage = () => {
 
     let reactSwipeEl;
     let indexOnSlide;
+
+    let userChoice = []
+    let [currentState, setCurrentState] = useState(0)
+
+    let likedQuestion = () =>{
+        userChoice.push(true)
+        console.log(userChoice)
+        reactSwipeEl.prev()
+    }
+
+    let dislikedQuestion = () =>{
+        userChoice.push(false)
+        console.log(userChoice)
+        reactSwipeEl.next()
+    }
+
     
     let onSlide = (e) =>{
       console.log(e)
@@ -48,10 +66,10 @@ const SwipperPage = () => {
           </div>
         </ReactSwipe>
         <div className='button-container'>
-            <div className='dislike-button-container' onClick={()=>reactSwipeEl.next()} >
+            <div className='dislike-button-container' onClick={dislikedQuestion} >
               <img src={dislike} alt='a dislike button'/>
             </div>
-            <div className='like-button-container' onClick={()=>reactSwipeEl.prev()}>
+            <div className='like-button-container' onClick={likedQuestion}>
               <img src={like} alt='a like button' />
             </div>
         </div>
