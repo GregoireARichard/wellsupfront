@@ -48,10 +48,10 @@ const SwipperPage = () => {
           </div>
         </ReactSwipe>
         <div className='button-container'>
-            <div className='dislike-button-container' onClick={()=>reactSwipeEl.prev()} >
+            <div className='dislike-button-container' onClick={()=>reactSwipeEl.next()} >
               <img src={dislike} alt='a dislike button'/>
             </div>
-            <div className='like-button-container' onClick={()=>reactSwipeEl.next()}>
+            <div className='like-button-container' onClick={()=>reactSwipeEl.prev()}>
               <img src={like} alt='a like button' />
             </div>
         </div>
