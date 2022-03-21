@@ -1,0 +1,73 @@
+.parameters-container{
+    width: 80%;
+    height: 80%;
+    padding: 10%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.parameters-container h2{
+    font-family: Lemon;
+    font-size: 2.5vh;
+}
+
+.parameters-container>h1{
+    margin-bottom: 6%;
+}
+
+.parameters-title{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 15%;
+}
+
+.parameters-title p{
+    font-size: 2vh;
+}
+
+.parameters-ressources{
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 6%;
+}
+
+.parameters-ressources>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+}
+
+.parameters-ressources>div>h3{
+    color: #FB8A7A;
+}
+
+.parameters-ressources>div>a{
+    color: #74787B;
+}
+
+.parameters-mentions{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-bottom: 6%;
+}
+
+.parameters-conditions{
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 120vh;
+}

@@ -3,10 +3,12 @@ import './PBar.css'
 
 import ProgressBar from "@ramonak/react-progress-bar";
 
-const PBar = () => {
+const PBar = (props) => {
+
+
   return (
     <div className='progressbar-container'>
-      <ProgressBar completed={12} bgColor={'#000000'} baseBgColor={'#EBEBEB'} labelAlignment={'outside'} labelColor={'#000000'} height={'10px'}/>
+      <ProgressBar completed={props.sossur} bgColor={'#000000'} baseBgColor={'#EBEBEB'} labelAlignment={'outside'} labelColor={'#000000'} height={'10px'}/>
     </div>
   )
 }

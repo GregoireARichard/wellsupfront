@@ -16,22 +16,24 @@ const SwipperPage = () => {
     let userChoice = []
     let [currentState, setCurrentState] = useState(0)
 
-    let likedQuestion = () =>{
+    let handleTaskBar = () => {
+      console.log(currentState,userChoice)
+    }
+
+
+    let likedQuestion = () =>{    
         userChoice.push(true)
-        console.log(userChoice)
         reactSwipeEl.prev()
+        handleTaskBar()
     }
 
     let dislikedQuestion = () =>{
+        
         userChoice.push(false)
-        console.log(userChoice)
         reactSwipeEl.next()
+        handleTaskBar()
     }
 
-    
-    let onSlide = (e) =>{
-      console.log(e)
-    }
 
     return (
       <div className='swipper-page'>
@@ -43,11 +45,11 @@ const SwipperPage = () => {
                transitionEnd: ()=>{
                 indexOnSlide = reactSwipeEl.getPos()
                 if(indexOnSlide===0){
-                  onSlide(indexOnSlide)
+                  dislikedQuestion()
                 }else if(indexOnSlide===2){
-                  onSlide(indexOnSlide)
+                  likedQuestion()
                 }
-                reactSwipeEl.slide(1,0)
+                reactSwipeEl.slide(1,150)
                },
                
             }}
@@ -73,7 +75,7 @@ const SwipperPage = () => {
               <img src={like} alt='a like button' />
             </div>
         </div>
-        <ProgressBar/>
+        <ProgressBar sossur={currentState}/>
       </div>
     );
 }
