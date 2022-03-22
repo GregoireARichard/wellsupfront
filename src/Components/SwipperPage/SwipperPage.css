@@ -1,10 +1,16 @@
 .swipper-page{
     width: 100%;
-    height: 80%;
+    height: 95%;
+    padding: 5% 5% 15% 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #AED5FF;
+}
+
+.swipper-page>h1{
+    width: 80%;
 }
 
 .carousel{
@@ -34,11 +40,15 @@
 } 
 
 .question-card{
-    width: 80%;
-    height: 90%;
+    width: 60%;
+    height: 70%;
     border-radius: 25px;
     box-shadow: 4px 7px 13px 5px rgba(0,0,0,0.35);
-    background-color: #77CBB9;
+    background-color: #ffffff;
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .button-container{

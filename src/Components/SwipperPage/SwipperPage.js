@@ -4,8 +4,8 @@ import React, {useState} from 'react'
 import ReactSwipe from 'react-swipe'
 import './SwipperPage.css'
 
-import dislike from './img/dislike.svg'
-import like from './img/like.svg'
+import cancel from './img/cancel.svg'
+import validate from './img/validate.svg'
 import ProgressBar from './ProgressBar/PBar.js'
 
 const SwipperPage = () => {
@@ -24,14 +24,15 @@ const SwipperPage = () => {
     let likedQuestion = () =>{ 
         setUserChoice(array => [...array, true])   
         setCurrentState(currentState+1)
-        reactSwipeEl.prev()
+        
         handleTaskBar()
     }
 
     let dislikedQuestion = () =>{
         setUserChoice(array => [...array, false])
+        
         setCurrentState(currentState+1)
-        reactSwipeEl.next()
+        
   
         handleTaskBar()
     }
@@ -39,6 +40,7 @@ const SwipperPage = () => {
 
     return (
       <div className='swipper-page'>
+        <h1>Logo</h1>
         <ReactSwipe
           className="carousel"
           swipeOptions={{
@@ -51,7 +53,7 @@ const SwipperPage = () => {
                 }else if(indexOnSlide===2){
                   likedQuestion()
                 }
-                reactSwipeEl.slide(1,150)
+                
                },
                
             }}
@@ -62,21 +64,24 @@ const SwipperPage = () => {
           </div>
           <div className='question-card-container'>
             <div className='question-card'>
-
+                <h3>Question</h3>
+                <div className='button-container'>
+                  
+                    <img src={cancel} alt='a dislike button' onClick={dislikedQuestion}/>
+                  
+                  
+                    <img src={validate} alt='a like button' onClick={likedQuestion}/>
+                  
+              </div>
             </div>
           </div>
           <div className='sossur3'>
 
           </div>
+          
         </ReactSwipe>
-        <div className='button-container'>
-            <div className='dislike-button-container' onClick={dislikedQuestion} >
-              <img src={dislike} alt='a dislike button'/>
-            </div>
-            <div className='like-button-container' onClick={likedQuestion}>
-              <img src={like} alt='a like button' />
-            </div>
-        </div>
+        
+        
         <ProgressBar sossur={currentState}/>
       </div>
     );
