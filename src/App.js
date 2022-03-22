@@ -5,6 +5,8 @@ import SwipperPage from './Components/SwipperPage/SwipperPage';
 import Navbar from './Components/Navbar/Navbar';
 import HomePage from './Components/HomePage/HomePage';
 import Parameters from './Components/Parameters/Parameters';
+import AxiosTests from './Components/axiosTests/AxiosTests';
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/swipper-page" element={<SwipperPage/>}/>
           <Route path="/" element={<HomePage/>}/>
           <Route path="/parametres" element={<Parameters/>}/>
+          <Route path="/axiosTests" element={<AxiosTests/>}/>
         </Routes>
         <Navbar/>
       </div>
