@@ -3,16 +3,40 @@ import React from 'react';
 
 
 function AxiosTests(){
-    let infoArray = [
-        "exemple",
-        "exemple2",
-
+    let global = {
+        yoStudy : true,
+        paid : false,
+        alternship: true,
+        stateRecognized : true,
+        location: false,
+        idf: null,
+        bigTown : null
+        }
+    let themes = [
+        "agriculture",
+        "animaux",
+        "agroalimentaire"
     ]
     const sendRequest = ()=>{
         const route = "http://localhost:4000/request/"
+        let urlPart1 = ""
+        let urlPart2 = ""
+        for(const [key, value] of Object.entries(global)){
+            if(key === "yoStudy"){
+                urlPart1 += `?${key}=${value}`
+            }
+            else{
+                urlPart1 += `&${key}=${value}`
+            }
+        }
+        let i = 0
+        for(const theme of themes){
+            i++
+            urlPart2 += `&theme${i}=${theme}`
+        }
         axios({
             method: 'get',
-            url: route + '?exemple=' + infoArray[0] + '&exemple2=' + infoArray[1]
+            url: route + urlPart1 + urlPart2
         })
     }
     return(
