@@ -13,7 +13,7 @@ const SwipperPage = () => {
     let reactSwipeEl;
     let indexOnSlide;
 
-    let userChoice = []
+    let [userChoice, setUserChoice] = useState([])
     let [currentState, setCurrentState] = useState(0)
 
     let handleTaskBar = () => {
@@ -21,16 +21,18 @@ const SwipperPage = () => {
     }
 
 
-    let likedQuestion = () =>{    
-        userChoice.push(true)
+    let likedQuestion = () =>{ 
+        setUserChoice(array => [...array, true])   
+        setCurrentState(currentState+1)
         reactSwipeEl.prev()
         handleTaskBar()
     }
 
     let dislikedQuestion = () =>{
-        
-        userChoice.push(false)
+        setUserChoice(array => [...array, false])
+        setCurrentState(currentState+1)
         reactSwipeEl.next()
+  
         handleTaskBar()
     }
 
