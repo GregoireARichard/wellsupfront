@@ -1,0 +1,20 @@
+.navbar{
+    width: 100vw;
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--bg-body);
+    z-index: 1;
+    -webkit-box-shadow: 1px 6px 19px 15px rgba(0,0,0,0.31); 
+    box-shadow: 1px 6px 19px 15px rgba(0,0,0,0.31);
+    -webkit-border-top-left-radius: 30px;
+    -webkit-border-top-right-radius: 30px;
+    -moz-border-radius-topleft: 30px;
+    -moz-border-radius-topright: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
