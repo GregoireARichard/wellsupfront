@@ -8,6 +8,8 @@ import cancel from './img/cancel.svg'
 import validate from './img/validate.svg'
 import ProgressBar from './ProgressBar/PBar.js'
 
+import logoPink from '../../img/wellSupPink.svg'
+
 const SwipperPage = () => {
 
     let reactSwipeEl;
@@ -40,7 +42,9 @@ const SwipperPage = () => {
 
     return (
       <div className='swipper-page'>
-        <h1>Logo</h1>
+        <h1>
+          <img src={logoPink} alt='WellSup'/>
+        </h1>
         <ReactSwipe
           className="carousel"
           swipeOptions={{

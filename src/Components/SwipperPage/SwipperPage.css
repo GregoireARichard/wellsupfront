@@ -9,9 +9,6 @@
     background-color: #AED5FF;
 }
 
-.swipper-page>h1{
-    width: 80%;
-}
 
 .carousel{
     width: 100%;
@@ -68,4 +65,13 @@
     align-items: center;
     border-radius: 50%;
     box-shadow: 4px 7px 19px 3px rgba(0,0,0,0.28);
+}
+
+.swipper-page > h1 {
+    width: 80%;
+    height: 7vh;
+}
+
+.swipper-page > h1 > img {
+    height: 100%;
 }

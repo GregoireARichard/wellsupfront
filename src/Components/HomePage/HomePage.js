@@ -3,10 +3,14 @@ import './HomePage.css'
 
 import {NavLink} from 'react-router-dom'
 
+import logoPink from '../../img/wellSupPink.svg'
+
 const HomePage = () => {
   return (
     <div className='homepage-container'>
-      <h1>Logo</h1>
+      <h1>
+        <img src={logoPink} alt='WellSup'/>
+      </h1>
       <div className='first-homepage-container'>
         <div className='start-test-container'>
           <h2>Questionnaire</h2>

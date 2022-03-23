@@ -27,6 +27,10 @@
     align-items: center;
 }
 
-.navbar>a>img{
-    height: 70%;
+.homeIcon{
+    height: 90%;
+}
+
+.questionMarkIcon, .paramIcon{
+    height: 45%;
 }

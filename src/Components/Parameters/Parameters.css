@@ -83,3 +83,12 @@
     justify-content: space-between;
     height: fit-content;
 }
+
+.parameters-container > h1 {
+    width: 30%;
+    height: 10vh;
+}
+
+.parameters-container > h1 > img {
+    height: 100%;
+}

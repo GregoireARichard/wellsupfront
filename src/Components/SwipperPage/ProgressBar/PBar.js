@@ -8,7 +8,7 @@ const PBar = (props) => {
 
   return (
     <div className='progressbar-container'>
-      <ProgressBar completed={props.sossur} bgColor={'#000000'} baseBgColor={'#EBEBEB'} labelAlignment={'outside'} labelColor={'#000000'} height={'10px'}/>
+      <ProgressBar completed={props.sossur} bgColor={'#FB8574'} baseBgColor={'#EBEBEB'} labelAlignment={'outside'} labelColor={'#FFFFFF'} height={'8px'}/>
     </div>
   )
 }

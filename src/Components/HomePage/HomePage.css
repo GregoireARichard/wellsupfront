@@ -90,3 +90,12 @@
     padding: 20% 5% 15% 5%;
 }
 
+.homepage-container > h1{
+    width: 30%;
+    height: 10%;
+}
+
+.homepage-container >h1 > img{
+    height: 100%;
+}
+

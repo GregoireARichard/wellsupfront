@@ -6,6 +6,7 @@ import './Explanations.css'
 
 import illustration from './img/illustration.svg'
 import triangle from './img/triangle.svg'
+import logoPink from '../../img/wellSupPink.svg'
 
 const Explanations = () => {
 
@@ -44,7 +45,9 @@ const Explanations = () => {
 
   return (
     <div className='explanations-container'>
-        <h1>Logo</h1>
+        <h1>
+          <img src={logoPink} alt='WellSup'/>
+        </h1>
         <div className='illustration-container'>
             <img src={illustration} alt='Une illustration'/>
         </div>

@@ -3,6 +3,7 @@ import './Parameters.css'
 
 import Loulou from './img/Loulou.png'
 import Card from './Card/Card'
+import logoPink from '../../img/wellSupPink.svg'
 
 const Parameters = () => {
 
@@ -53,13 +54,12 @@ const Parameters = () => {
 
   let teamMembersMap = teamMember.map(teamMember=>(<Card key={teamMember.id} teamMember={teamMember}/>))
 
-  console.log(teamMembersMap)
 
 
   return (
     <div className='parameters-container'>
         <h1>
-            Logo
+          <img src={logoPink} alt='WellSup'/>
         </h1>
         <div className='parameters-title'>
           <h2>Paramètres</h2>
