@@ -5,6 +5,13 @@
     flex-direction: column;
     justify-content: flex-end;
     margin-bottom: 10%;
+    transition: 0.1s ease;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.1s ease;
+    cursor: pointer;
 }
 
 .card-bg>img{
