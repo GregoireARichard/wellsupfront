@@ -37,8 +37,11 @@ function AxiosTests(){
         axios({
             method: 'get',
             url: route + urlPart1 + urlPart2
-        })
+        })      
     }
+    let url = new URL(window.location.href);
+    const parsed = url.search
+    console.log(url.search)
     return(
         <div>
             <h1>Test Axios</h1>
