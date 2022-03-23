@@ -1,28 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Results(){
     let url = new URLSearchParams(window.location.href);
     let arrayOfGet = []
+
     for(let item of url.entries()){
         arrayOfGet.push(item[1])
     }
-    console.log(arrayOfGet)
-    for(let i = 0; i <= arrayOfGet.length-1; i++){
-        //document.querySelector(`.arg${i+1}`).innerHTML = arrayOfGet[i]
-        if(i >0 && i <= 5){
-            console.log(i + " : " + arrayOfGet[i])
-        }
-        
-        else if(i >5){ //secondCard
-            //document.querySelector(`.subCard2 > .arg${i}`).innerHTML = arrayOfGet[i]
-            console.log(i + " : " + arrayOfGet[i])
-        }
-        else if (i > 11){//thirdCard
-            console.log(i + " : " + arrayOfGet[i])
-            document.querySelector(`.subCard3 > .arg${i}`).innerHTML = arrayOfGet[i]
-        }
-    }
-   
+
+    useEffect(() => {
+        for(let i = 0; i <= arrayOfGet.length-1; i++){
+            if(i >=0 && i <= 5){
+                document.querySelector(`.subCard1 > .arg${i+1}`).innerHTML = arrayOfGet[i]
+            }
+            else if(i >5 && i <= 11){
+                document.querySelector(`.subCard2 > .arg${i-5}`).innerHTML = arrayOfGet[i]
+            }
+            else if (i > 11) {
+                document.querySelector(`.subCard3 > .arg${i-11}`).innerHTML = arrayOfGet[i]
+            }
+        }    
+    });
+
     return(
         <div>
             <h1>Résultats</h1>
