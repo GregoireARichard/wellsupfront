@@ -5,7 +5,10 @@ import SwipperPage from './Components/SwipperPage/SwipperPage';
 import Navbar from './Components/Navbar/Navbar';
 import HomePage from './Components/HomePage/HomePage';
 import Parameters from './Components/Parameters/Parameters';
+import AxiosTests from './Components/axiosTests/AxiosTests';
+import Results from './Components/results/results';
 import Explanations from './Components/Explanations/Explanations';
+
 
 function App() {
   return (
@@ -16,6 +19,8 @@ function App() {
           <Route path="/" element={<HomePage/>}/>
           <Route path="/explanations" element={<Explanations/>}/>
           <Route path="/parametres" element={<Parameters/>}/>
+          <Route path="/axiosTests" element={<AxiosTests/>}/>
+          <Route path="/results" element={<Results/>}/>
         </Routes>
         <Navbar/>
       </div>
