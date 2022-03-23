@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className='start-test-container'>
           <h2>Questionnaire</h2>
           <p>Fais le quiz pour trouver la formation la plus adapter pour toi</p>
-          <NavLink to='/swipper-page'>Commencer</NavLink>
+          <NavLink to='/explanations'>Commencer</NavLink>
         </div>
         <div className='tendance-container'>
             <h3>Tendance</h3>
