@@ -1,0 +1,101 @@
+.homepage-container{
+    width: 90%;
+    padding: 5vh 5vw;
+    height: 90vh;
+    background: linear-gradient(180deg, #F7FBFF 0%, #E0EEFF 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+}
+
+.homepage-container>h1{
+    height: 10%;
+    padding-bottom: 10%;
+}
+
+.first-homepage-container{
+    width: 100%;
+    height: 60%;
+    display: grid;
+    grid-template: 60% 40% / 48% 4% 48%;
+}
+
+.first-homepage-container .start-test-container{
+    background-color: #FB8A7A;
+    grid-area: 1/1/2/4;
+    border-radius: 15px 15px 100% 100% / 15px 15px 70% 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5% 5% 20% 5%;
+}
+
+.first-homepage-container .start-test-container >h2 {
+    font-family: Lemon;
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+
+.first-homepage-container .start-test-container > p {
+    font-family: degular, sans-serif;
+    font-size: 12px;
+    margin-bottom: 3%;
+}
+
+.first-homepage-container .start-test-container > a{
+    width: 40%;
+    height: 20%;
+    background-color: #7788F4;
+    border-radius: 10px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-family: degular, sans-serif;
+    font-size: 14px;
+}
+
+
+.first-homepage-container .tendance-container{
+    background-color: #AED5FF;
+    grid-area: 2/ 1 / 3/ 2;
+    border-radius: 15px 100% 15px 15px / 15px 30% 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20% 5% 15% 5%;
+}
+
+.first-homepage-container .tendance-container > h3, .first-homepage-container > .commerce-container >h3 {
+    font-family: Lemon;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.first-homepage-container .tendance-container > p, .first-homepage-container > .commerce-container > p {
+    font-family: degular, sans-serif;
+    color: #ffffff;
+    font-size: 14px;
+} 
+
+
+
+.first-homepage-container .commerce-container{
+    grid-area: 2/3/3/4;
+    background-color: #7788F4;
+    border-radius: 100% 15px 15px 15px / 30% 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20% 5% 15% 5%;
+}
+
+.homepage-container > h1{
+    width: 30%;
+    height: 10%;
+}
+
+.homepage-container >h1 > img{
+    height: 100%;
+}
+
