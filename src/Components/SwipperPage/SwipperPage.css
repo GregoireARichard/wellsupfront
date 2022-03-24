@@ -4,26 +4,26 @@
     padding: 5% 5% 15% 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #AED5FF;
 }
 
 
-.carousel{
+#carousel{
     width: 100%;
     height: 80%;
     
 }
 
-.carousel>div{
+#carousel>div{
     width: 100%;
     height: 100%;
     
     
 }
 
-.carousel>div>div{
+#carousel>div>div{
     height: 100%;
 }
 
@@ -74,4 +74,30 @@
 
 .swipper-page > h1 > img {
     height: 100%;
+}
+
+#choose-theme-container.notActive,#carousel.notActive{
+    display: none;
+}
+
+
+#choose-theme-container{
+    width: 90%;
+    height: 25vh;
+    background-color: aqua;
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.swap-button{
+    width: 15%;
+    height: 15%;
+    border-radius: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

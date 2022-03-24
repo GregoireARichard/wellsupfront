@@ -11,6 +11,16 @@ import logoPink from '../../img/wellSupPink.svg'
 
 const SwipperPage = () => {
 
+    const [sectionActive, setSectionActive] = useState(true)
+    console.log(sectionActive)
+    let sossur = 'sossurrr'
+
+    let swapDisplay = () =>{
+      let themeChosen = document.getElementById('theme-select').value
+      setSectionActive(!sectionActive)
+
+    }
+
     let reactSwipeEl;
     let indexOnSlide;
 
@@ -44,8 +54,34 @@ const SwipperPage = () => {
         <h1>
           <img src={logoPink} alt='WellSup'/>
         </h1>
+        <div className={sectionActive ? "isActive" : "notActive"} id='choose-theme-container'>
+          <div className='select-container'>
+            <label >Choisissez un thème :</label>
+            <select id='theme-select' name='theme-select'>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Architecture/Urbanisme">Architecture/Urbanisme</option>
+              <option value="Banque/Assurance">Banque/Assurance</option>
+              <option value="Traduction/Interprétation">Traduction/Interprétation</option>
+              <option value="Communication/Journalisme">Communication/Journalisme</option>
+              <option value="Audio visuel/Édition">Audio visuel/Édition</option>
+              <option value="Bâtiments/Travaux publics">Bâtiments/Travaux publics</option>
+              <option value="Droit/Eco/Gestion">Droit/Eco/Gestion</option>
+              <option value="Enseignement">Enseignement</option>
+              <option value="Hôtellerie/Restauration/Tourisme">Hôtellerie/Restauration/Tourisme</option>
+              <option value="Art/Mode">Art/Mode</option>
+              <option value="Industrie/Ingénieur">Industrie/Ingénieur</option>
+              <option value="Informatique/Internet/Web">Informatique/Internet/Web</option>
+              <option value="Commerce/Marketing">Commerce/Marketing</option>
+              <option value="Medical/Social/Sport">Medical/Social/Sport</option>
+            </select>
+          </div>
+          <div className='swap-button' onClick={swapDisplay}>
+            <span>Valider</span>
+          </div>
+        </div>
         <ReactSwipe
-          className="carousel"
+          className={sectionActive ? "notActive" : "isActive"}
+          id='carousel'
           swipeOptions={{
                continuous: true,
                startSlide:1,
@@ -67,7 +103,7 @@ const SwipperPage = () => {
           </div>
           <div className='question-card-container'>
             <div className='question-card'>
-                <h3>Question</h3>
+                <h3>{sossur}</h3>
                 <div className='button-container'>
                   
                     <img src={cancel} alt='a dislike button' onClick={dislikedQuestion}/>
