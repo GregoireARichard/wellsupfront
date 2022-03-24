@@ -56,7 +56,7 @@ const Parameters = () => {
       name:'Léna Vulliez',
       post:'UX Designer',
       img:Lenaze,
-      link:''
+      link:'http://lenavulliez.myportfolio.com/'
     },
     {
       id:6,
@@ -86,10 +86,20 @@ const Parameters = () => {
         <div className='parameters-ressources'>
           <h2>Nos resources</h2>
           <div>
-            <h3>Titre du lien :</h3>
-            <a href=''>https://www.40-60studio.com/contactez-nous</a>
-            <h3>Titre du lien :</h3>
-            <a href=''>https://www.40-60studio.com/contactez-nous</a>
+            <h3>React.js</h3>
+            <a href='https://fr.reactjs.org/'>https://fr.reactjs.org/ </a>
+            <h3>Ruby on Rails</h3>
+            <a href='https://rubyonrails.org/'>https://rubyonrails.org/</a>
+            <h3>GCP</h3>
+            <a href='https://cloud.google.com/?hl=fr'>https://cloud.google.com/?hl=fr</a>
+            <h3>Axios</h3>
+            <a href='https://axios-http.com/docs/intro'>https://axios-http.com/docs/intro</a>
+            <h3>Docker</h3>
+            <a href='https://www.docker.com/'>https://www.docker.com/</a>
+            <h3>React Swipe</h3>
+            <a href='https://github.com/voronianski/react-swipe'>https://github.com/voronianski/react-swipe</a>
+            <h3>React Router</h3>
+            <a href='https://reactrouter.com/'>https://reactrouter.com/</a>
           </div>  
         </div>
         <div className='parameters-mentions'>
