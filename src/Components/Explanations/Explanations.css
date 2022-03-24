@@ -8,7 +8,7 @@
 .explanations-container>h1{
     margin-bottom: 10%;
     margin-left: 10%;
-}
+} 
 
 .explanations-container .illustration-container{
     width: 100%;
@@ -86,6 +86,7 @@
     background-color: transparent;
     border: 1px solid #AED5FF;
     border-radius: 50%;
+    transition: ease 0.4s;
 }
 
 .dots-container .active{
@@ -93,6 +94,7 @@
     width: 30px;
     border-radius: 10px;
     background-color: #AED5FF;
+    transition: ease 0.4s;
 }
 
 
