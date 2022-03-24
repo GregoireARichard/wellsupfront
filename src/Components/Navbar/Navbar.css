@@ -18,3 +18,19 @@
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
+
+.navbar>a{
+    width: 20%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeIcon{
+    height: 90%;
+}
+
+.questionMarkIcon, .paramIcon{
+    height: 45%;
+}
