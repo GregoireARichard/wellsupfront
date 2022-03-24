@@ -18,7 +18,7 @@ function AxiosTests(){
         "agroalimentaire"
     ]
     const sendRequest = ()=>{
-        const route = "http://localhost:4000/request/"
+        const route = "https://h3-proxy.services.quickpipes.io/team1/request"
         let urlPart1 = ""
         let urlPart2 = ""
         for(const [key, value] of Object.entries(global)){
