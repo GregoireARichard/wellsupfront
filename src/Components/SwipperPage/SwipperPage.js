@@ -77,7 +77,7 @@ const SwipperPage = () => {
             dataToSend['bigTown'] = "null"
           }
 
-          let route = "https://zippy-smakager-c1ceed.netlify.app/request/?"
+          let route = "https://h3-proxy.services.quickpipes.io/team1/request/?"
           for (const [key, value] of Object.entries(dataToSend)) {
             route += `${key}=${value}&`
           }
