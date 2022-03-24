@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './results.css'
 
 import WellSupRose from '../../img/wellSupPink.svg'
+import EcoleCard from './EcoleCard/EcoleCard';
 
 function Results(){
     let url = new URLSearchParams(window.location.href);
@@ -11,21 +12,18 @@ function Results(){
         arrayOfGet.push(item[1])
     }
 
-    console.log(arrayOfGet)
 
-    useEffect(() => {
-        for(let i = 0; i <= arrayOfGet.length-1; i++){
-            if(i >=0 && i <= 5){
-                document.querySelector(`.firstCard  .arg${i+1}`).innerHTML = arrayOfGet[i]
-            }
-            else if(i >5 && i <= 11){
-                document.querySelector(`.subCard2  .arg${i-5}`).innerHTML = arrayOfGet[i]
-            }
-            else if (i > 11) {
-                document.querySelector(`.subCard3  .arg${i-11}`).innerHTML = arrayOfGet[i]
-            }
-        }    
-    });
+    const ecolesList = [
+        {id:0,ecoleName:arrayOfGet[0],programmeName:arrayOfGet[1],anneeFormation:arrayOfGet[2],formationTheme:arrayOfGet[3],site:arrayOfGet[4],telephone:arrayOfGet[5]},
+        {id:1,ecoleName:arrayOfGet[6],programmeName:arrayOfGet[7],anneeFormation:arrayOfGet[8],formationTheme:arrayOfGet[9],site:arrayOfGet[10],telephone:arrayOfGet[11]},
+        {id:2,ecoleName:arrayOfGet[12],programmeName:arrayOfGet[13],anneeFormation:arrayOfGet[14],formationTheme:arrayOfGet[15],site:arrayOfGet[16],telephone:arrayOfGet[17]}
+    ]
+
+    let ecolesListMap = ecolesList.map(ecole=>(<EcoleCard key={ecole.id} ecole={ecole}/>))
+
+    console.log(ecolesListMap)
+
+    
 
     return(
         <div className='results-container'>
@@ -38,44 +36,7 @@ function Results(){
                 <span>Télécharger</span>
             </div>
             <div className="resultCards">
-                <div className="firstCard resultcard">
-                        <h3 className='arg1'></h3>
-                        <div className='infos-icon-container'>
-                            <p className="arg2"></p>
-                        </div>         
-                    <div className="subCard subCard1">   
-                        <p className="arg3"></p>
-                        <p className="arg4"></p>
-                        <p className="arg5"></p>
-                        <p className="arg6"></p>
-
-                    </div>
-
-                </div>
-                <div className="secondCard resultcard">
-                    <div className="subCard subCard2">
-                        <h3 className='arg1'></h3>
-                        <p className="arg2"></p>
-                        <p className="arg3"></p>
-                        <p className="arg4"></p>
-                        <p className="arg5"></p>
-                        <p className="arg6"></p>
-
-                    </div>
-
-                </div>
-                <div className="thirdCard resultcard">
-                    <div className="subCard subCard3">
-                        <h3 className='arg1'></h3>
-                        <p className="arg2"></p>
-                        <p className="arg3"></p>
-                        <p className="arg4"></p>
-                        <p className="arg5"></p>
-                        <p className="arg6"></p>
-
-                    </div>
-
-                </div>
+                {ecolesListMap}
             </div>
         </div>
     )        

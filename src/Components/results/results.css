@@ -49,26 +49,10 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    height: fit-content;
+    height: 50vh;
     margin-top: 6%;
     overflow: scroll;
 }
 
-.results-container .resultCards .resultcard{
-    width: 38%;
-    height: 20vh;
-    background-color: aquamarine;
-    border-radius: 20px;
-    padding: 5%;
-    margin-bottom: 5%;
-}
 
-.resultcard .subCard{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
-.resultcard .subCard .arg3, .resultcard .subCard .arg4, .resultcard .subCard .arg5, .resultcard .subCard .arg6{
-    display: none;
-}
