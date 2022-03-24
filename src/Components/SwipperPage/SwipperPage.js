@@ -77,7 +77,7 @@ const SwipperPage = () => {
             dataToSend['bigTown'] = "null"
           }
 
-          let route = "http://localhost:4000/request/?"
+          let route = "https://zippy-smakager-c1ceed.netlify.app/request/?"
           for (const [key, value] of Object.entries(dataToSend)) {
             route += `${key}=${value}&`
           }
@@ -93,10 +93,12 @@ const SwipperPage = () => {
           route = route.slice(0, -1)
           console.log(route)
 
-          axios({
-            method: 'get',
-            url: route
-          })   
+          window.location.replace(route)
+
+          // axios({
+          //   method: 'get',
+          //   url: route
+          // })   
 
           // /request/?yoStudy=true&paid=false&alternship=true
           //&stateRecognized=true&location=false&idf=null&bigTown=null
