@@ -30,7 +30,7 @@ const Explanations = () => {
       setDot1Active(true)
       setDot2Active(false)
       setDot3Active(true)
-      console.log(currentExplanation,dot1Active,dot2Active,dot3Active)
+      
     }else if(currentExplanation==1){
       setDot1Active(true)
       setDot2Active(true)
@@ -38,7 +38,7 @@ const Explanations = () => {
     }else if(currentExplanation==2){
       navigate('/swipper-page')
     }
-    console.log(currentExplanation,dot1Active,dot2Active,dot3Active)
+    
   }
 
   

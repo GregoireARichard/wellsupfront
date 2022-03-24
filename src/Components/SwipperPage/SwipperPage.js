@@ -6,7 +6,6 @@ import './SwipperPage.css'
 
 import cancel from './img/cancel.svg'
 import validate from './img/validate.svg'
-import ProgressBar from './ProgressBar/PBar.js'
 
 import logoPink from '../../img/wellSupPink.svg'
 
@@ -84,9 +83,6 @@ const SwipperPage = () => {
           </div>
           
         </ReactSwipe>
-        
-        
-        <ProgressBar sossur={currentState}/>
       </div>
     );
 }
