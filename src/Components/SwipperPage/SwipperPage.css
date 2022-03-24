@@ -98,8 +98,8 @@
     width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 30%;
+    justify-content: space-between;
+    height: 40%;
 }
 
 #choose-theme-container .select-container label{
@@ -108,10 +108,12 @@
 }
 
 .swap-button{
-    width: 15%;
+    width: 25%;
     height: 15%;
     border-radius: 20px;
-    background-color: aquamarine;
+    background-color: #FB8574;
+    font-family: degular, sans-serif;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;

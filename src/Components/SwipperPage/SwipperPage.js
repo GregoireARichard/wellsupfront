@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import Select from 'react-select'
 
 import ReactSwipe from 'react-swipe'
 import './SwipperPage.css'
@@ -11,14 +11,37 @@ import logoPink from '../../img/wellSupPink.svg'
 
 const SwipperPage = () => {
 
-    const [sectionActive, setSectionActive] = useState(true)
-    console.log(sectionActive)
-    let sossur = 'sossurrr'
+  const [themeChosen, setThemeChosen] = useState(null)
+
+    const options = [
+      { value: 'Agriculture', label: 'Agriculture' },
+      { value: 'Architecture/Urbanisme', label: 'Architecture/Urbanisme' },
+      { value: 'Banque/Assurance', label: 'Banque/Assurance' },
+      { value: 'Traduction/Interprétation', label: 'Traduction/Interprétation' },
+      { value: 'Communication/Journalisme', label: 'Communication/Journalisme' },
+      { value: 'Audio visuel/Édition', label: 'Audio visuel/Édition' },
+      { value: 'Bâtiments/Travaux publics', label: 'Bâtiments/Travaux publics' },
+      { value: 'Droit/Eco/Gestion', label: 'Droit/Eco/Gestion' },
+      { value: 'Enseignement', label: 'Enseignement' },
+      { value: 'Hôtellerie/Restauration/Tourisme', label: 'Hôtellerie/Restauration/Tourisme' },
+      { value: 'Art/Mode', label: 'Art/Mode' },
+      { value: 'Industrie/Ingénieur', label: 'Industrie/Ingénieur' },
+      { value: 'Informatique/Internet/Web', label: 'Informatique/Internet/Web' },
+      { value: 'Commerce/Marketing', label: 'Commerce/Marketing' },
+      { value: 'Medical/Social/Sport', label: 'Medical/Social/Sport' }
+    ]
+
+    const [sectionActive, setSectionActive] = useState(true)  
+
+    let handleThemeChange = (e) => {
+      setThemeChosen(e.value)
+    }
 
     let swapDisplay = () =>{
-      let themeChosen = document.getElementById('theme-select').value
-      setSectionActive(!sectionActive)
-
+      if(themeChosen != null){
+        setSectionActive(!sectionActive)
+      }
+      
     }
 
     let reactSwipeEl;
@@ -57,23 +80,7 @@ const SwipperPage = () => {
         <div className={sectionActive ? "isActive" : "notActive"} id='choose-theme-container'>
           <div className='select-container'>
             <label >Choisissez un thème :</label>
-            <select id='theme-select' name='theme-select'>
-              <option value="Agriculture">Agriculture</option>
-              <option value="Architecture/Urbanisme">Architecture/Urbanisme</option>
-              <option value="Banque/Assurance">Banque/Assurance</option>
-              <option value="Traduction/Interprétation">Traduction/Interprétation</option>
-              <option value="Communication/Journalisme">Communication/Journalisme</option>
-              <option value="Audio visuel/Édition">Audio visuel/Édition</option>
-              <option value="Bâtiments/Travaux publics">Bâtiments/Travaux publics</option>
-              <option value="Droit/Eco/Gestion">Droit/Eco/Gestion</option>
-              <option value="Enseignement">Enseignement</option>
-              <option value="Hôtellerie/Restauration/Tourisme">Hôtellerie/Restauration/Tourisme</option>
-              <option value="Art/Mode">Art/Mode</option>
-              <option value="Industrie/Ingénieur">Industrie/Ingénieur</option>
-              <option value="Informatique/Internet/Web">Informatique/Internet/Web</option>
-              <option value="Commerce/Marketing">Commerce/Marketing</option>
-              <option value="Medical/Social/Sport">Medical/Social/Sport</option>
-            </select>
+            <Select options={options} placeholder='Choisissez un thème' onChange={handleThemeChange} />
           </div>
           <div className='swap-button' onClick={swapDisplay}>
             <span>Valider</span>
@@ -103,7 +110,7 @@ const SwipperPage = () => {
           </div>
           <div className='question-card-container'>
             <div className='question-card'>
-                <h3>{sossur}</h3>
+                <h3>{themeChosen}</h3>
                 <div className='button-container'>
                   
                     <img src={cancel} alt='a dislike button' onClick={dislikedQuestion}/>
