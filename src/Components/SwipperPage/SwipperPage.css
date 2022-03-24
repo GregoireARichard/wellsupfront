@@ -82,14 +82,29 @@
 
 
 #choose-theme-container{
-    width: 90%;
+    width: 80%;
     height: 25vh;
-    background-color: aqua;
+    background-color: #ffffff;
     margin-top: 10%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    padding: 0 5%;
+    border-radius: 25px;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.3);
+}
+
+#choose-theme-container .select-container{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30%;
+}
+
+#choose-theme-container .select-container label{
+    width: 100%;
+    font-family: Lemon;
 }
 
 .swap-button{
