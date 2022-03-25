@@ -93,10 +93,12 @@ const SwipperPage = () => {
           route = route.slice(0, -1)
           console.log(route)
 
-          axios({
-            method: 'get',
-            url: route
-          })   
+          window.location.replace(route)
+
+          // axios({
+          //   method: 'get',
+          //   url: route
+          // })   
 
           // /request/?yoStudy=true&paid=false&alternship=true
           //&stateRecognized=true&location=false&idf=null&bigTown=null
