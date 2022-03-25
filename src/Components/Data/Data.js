@@ -321,11 +321,11 @@ let themesToExport = {
 }
 
 let questionsToExport = {
-    'yoStudy': "Combien de temps voulez-vous étudier ?",
+    'yoStudy': "Voulez-vous faire des études longues ?",
     'paid': "Voulez-vous être dans le public ?",
     'alternship': "Voulez-vous faire de l'apprentissage ?",
     'stateRecognized': "Est-ce qu'un diplôme reconnu par l'état est important pour vous ?",
-    'location': "Avez-vous une préfèrence de localisation ?",
+    'location': "Vous avez une préfèrence dans la ville où vous étudierez ?",
     'idf': 'Voulez-vous être en Île-de-France ?',
     'bigTown': 'Ou dans une grande ville peut-être ?'
 }
